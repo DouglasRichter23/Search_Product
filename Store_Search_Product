@@ -1,4 +1,11 @@
+/// <reference types="Cypress" />
+
 describe('Entrar na Loja', function()  {
+
+
+before (() =>{
+cy.login
+ })
 
  it('what_it_does', function() {
 
@@ -13,7 +20,28 @@ describe('Entrar na Loja', function()  {
  cy.get('.product-61 > .wd-product-line > .item-description > .name > a').click()
  
   cy.visit('https://www.genesis.core.dcg.com.br/produto-virtual-curso-p61')
+
+  cy.contains("Comprar").click()
+
+  cy.visit ('https://genesis.core.dcg.com.br/carrinho')
+
+  //cy.contains ('Finalizar compra').click()
+
+  cy.get (".bt-checkout").click()
+
+  cy.visit ('https://genesis.core.dcg.com.br/checkout/easy#signin')
+
+  //cy.get('.Identifique-se').should('exist')
  
+cy.get ("Login.Email").type ('core.douglas.richter')
+cy.get("Login.Password").type ('123')
+
+cy.get (".btn-wide.btn-big").click()
+
+
+//cy.get('.dropdown-toggle settings(ex parabens)').should('exist')
+//
+
  })
 
 })
