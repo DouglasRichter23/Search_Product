@@ -1,0 +1,19 @@
+describe('Entrar na Loja', function()  {
+
+ it('what_it_does', function() {
+
+    //cy.viewport(1370, 988)
+ 
+    cy.visit('https://www.genesis.core.dcg.com.br/')
+ 
+  cy.get('.row > #top-search > .wd-search > form > button').click()
+ 
+  cy.visit('https://www.genesis.core.dcg.com.br/pesquisa?t=')
+ 
+ cy.get('.product-61 > .wd-product-line > .item-description > .name > a').click()
+ 
+  cy.visit('https://www.genesis.core.dcg.com.br/produto-virtual-curso-p61')
+ 
+ })
+
+})
