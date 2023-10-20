@@ -33,8 +33,8 @@ cy.login
 
   //cy.get('.Identifique-se').should('exist')
  
-cy.get ("Login.Email").type ('core.douglas.richter')
-cy.get("Login.Password").type ('123')
+cy.get ("Login.Email").type ('XXXX')
+cy.get("Login.Password").type ('123XX')
 
 cy.get (".btn-wide.btn-big").click()
 
